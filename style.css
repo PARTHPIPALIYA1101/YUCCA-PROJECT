@@ -1,113 +1,152 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Roboto,sans-serif
 }
+
 #sec1{
-    background-image: url("https://yucca.co.za/wp-content/uploads/2025/09/yucca-packaging-homepage-intro-plastic-cups-for-iced-chilled-drinks-2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: auto;
-    height: 100vh;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 1%;
-}
-
+    background-image:url("https://yucca.co.za/wp-content/uploads/2025/09/yucca-packaging-homepage-intro-plastic-cups-for-iced-chilled-drinks-2.jpg");
+    background-size:cover;
+    height:100vh;
+    padding:1% 10%
+}   
 #navi-1{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 3px solid #D1CABA;   
-    padding-bottom: 30px;
-}
-
-#navi-1 ul{
-    list-style: none;
-    display: flex;
-    gap: 40px;
-    align-items: center;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:3px solid #D1CABA;
+    padding-bottom:30px
 }
 
 #navi-left{
-    display: flex;
-    gap: 100px;
-}
-#navi-left img{
-    width: 54px;
-}
-#navi-img{
-    display: flex;
-    gap: 5px;
-}
-#navi-img h1{
-    font-size: 24px;
-}
-#navi-1 ul li a{
-    text-decoration: none;
-    color: #123028;
-    font-size: 16px;
-}
-#sec-p2{
-    padding-top: 3%;
-    display: flex;
-    flex-direction: column;
-    gap: 135px;
-}
-#secp2-box-main{
-    display: flex;
-    gap: 15px;
+    display:flex;
+    gap:100px
 }
 
-.secp2-box{
-    width: 375px;
-    height: 350px;
-    border-radius: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 35px;
-    backdrop-filter: blur(20px);
-    position: relative;
-    overflow: hidden;
+#navi-img{
+    display:flex;
+    gap:5px;
+    align-items:center
+}
+
+#navi-img img{
+    width:54px
+}
+
+#navi-img h1{
+    font-size:24px
+}
+
+#navi-1 ul{
+    display:flex;
+    list-style:none;
+    gap:40px;
+    align-items:center
+}
+
+#navi-1 a{
+    text-decoration:none;
+    color:#123028;
+    font-size:16px
+}
+
+.cart{
+    width:35px;
+    height:35px;
+    border:1px solid #000;
+    border-radius:5px;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative
+}
+
+.cart1,.cart2{
+    position:absolute;
+    font-size:20px;
+    transition:0.3s ease
+}
+
+.cart2{
+    top:100%;
+    background:#1d1d1d;
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff
+}
+
+.cart:hover .cart1{
+    top:-100%
+}
+
+.cart:hover .cart2{
+    top:0
+}
+
+#sec-p2{
+    padding-top:3%;
+    display:flex;
+    flex-direction:column;
+    gap:135px
 }
 
 #sec-p2 h1{
-    font-size: 90px;
-    font-weight: 100;
+    font-size:90px;
+    font-weight:100
 }
 
-.specp2-inbox {
-    transition: 0.5s ease;
+#secp2-box-main{
+    display:flex;
+    gap:15px
+}
+
+.secp2-box{
+    width:375px;
+    height:350px;
+    border-radius:10%;
+    backdrop-filter:blur(20px);
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:35px
+}
+
+.specp2-inbox{
+    transition:.5s ease
 }
 
 .secp2-box-h{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    font-size: 20px;
-    padding: 20px;
-    opacity: 0;
-    transform: translateY(100%);
-    transition: 0.5s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    position:absolute;
+    inset:0;
+    padding:20px;
+    font-size:20px;
+    opacity:0;
+    transform:translateY(100%);
+    transition:.5s ease;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around
 }
 
-.secp2-box:hover .specp2-inbox {
-    transform: translateY(-100px);
-    opacity: 0;
+.secp2-box:hover .specp2-inbox{
+    transform:translateY(-100px);
+    opacity:0
 }
 
-.secp2-box:hover .secp2-box-h {
-    opacity: 1;
-    transform: translateY(0);
+.secp2-box:hover .secp2-box-h{
+    opacity:1;
+    transform:translateY(0)
 }
 
 .tellmemore{
-    display: flex;
-    justify-content: space-between;
+    display:flex;
+    justify-content:space-between
 }
+
