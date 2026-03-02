@@ -8,9 +8,10 @@
 #sec1{
     background-image:url("https://yucca.co.za/wp-content/uploads/2025/09/yucca-packaging-homepage-intro-plastic-cups-for-iced-chilled-drinks-2.jpg");
     background-size:cover;
-    height:100vh;
+    height:105vh;
     padding:1% 10%
-}   
+}
+
 #navi-1{
     display:flex;
     justify-content:space-between;
@@ -47,7 +48,7 @@
 
 #navi-1 a{
     text-decoration:none;
-    color:#123028;
+    color:#613028;
     font-size:16px
 }
 
@@ -66,7 +67,7 @@
 .cart1,.cart2{
     position:absolute;
     font-size:20px;
-    transition:0.3s ease
+    transition:.3s ease
 }
 
 .cart2{
@@ -119,34 +120,177 @@
 }
 
 .specp2-inbox{
-    transition:.5s ease
+    transition: .5s ease;
 }
 
 .secp2-box-h{
     position:absolute;
     inset:0;
-    padding:20px;
+    padding-left:20px;
+    padding-right:20px;
     font-size:20px;
     opacity:0;
-    transform:translateY(100%);
-    transition:.5s ease;
+    transition: .5s ease;
     display:flex;
     flex-direction:column;
-    justify-content:space-around
+    justify-content:space-around;
 }
 
 .secp2-box:hover .specp2-inbox{
-    transform:translateY(-100px);
-    opacity:0
+    opacity:0;
 }
 
 .secp2-box:hover .secp2-box-h{
     opacity:1;
+    background-color: #fffdf5;
+    .linehover{
+        width: 100%;
+    }
+}
+.linehover{
+    border: 1px solid black;
+    width: 0%;
+    transition: 0.5s ease;
+}
+.tellmemore{
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+    gap: 8px;
+}
+.tellmearrow{
+    display: flex;
+    justify-content: space-between;
+}
+.text-lines{
+    display:flex;
+    flex-direction:column;
+    gap:6px
+}
+
+.d{
+    height:16px;
+    overflow:hidden
+}
+
+.d p{
+    transform:translateY(100%);
+    transition:1s ease
+}
+
+.secp2-box:hover .d p{
     transform:translateY(0)
 }
 
-.tellmemore{
-    display:flex;
-    justify-content:space-between
+.d{
+    overflow:hidden;
 }
 
+.d p{
+    margin:0;
+    display:block;
+    transform:translateY(100%);
+    transition-property:transform;
+    font-size: 16px;
+}
+
+.secp2-box:hover .dp{ 
+    transition-duration:.1s; transform:translateY(0); 
+}
+
+.nav-links{
+    display:flex;
+    gap:40px;
+    list-style:none
+}
+
+.nav-links li{
+    position:relative
+}
+
+.nav-links li a{
+    text-decoration:none;
+    color:#1D1D1D;
+    position:relative;
+    padding:5px 0
+}
+
+.nav-links li a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-10px;
+    width:100%;
+    height:3px;
+    background:#1D1D1D;
+    border-radius:20px;
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:.3s ease
+}
+
+.nav-links li a:hover::after{
+    transform:scaleX(1)
+}
+
+
+.sec2{
+    background-color: #DFDAC6;
+    background-image: url("https://yucca.co.za/wp-content/uploads/2025/05/1c9fd89a470793175cfc7f14a7a6e6dc.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 800px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: 100vh;
+}
+
+.slider-main {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 12s linear infinite;
+  padding-top: 400px;
+}
+
+.slider {
+  display: flex;
+  gap: 40px;
+  padding-right: 40px;
+  
+}
+
+.slider span {
+  font-size: 64px;
+  color: #000000;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.slider-track1 {
+  display: flex;
+  width: max-content;
+  animation: scroll1 12s linear infinite;
+}
+
+@keyframes scroll1 {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
