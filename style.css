@@ -1,244 +1,256 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Roboto,sans-serif
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif
 }
 
-#sec1{
-    background-image:url("https://yucca.co.za/wp-content/uploads/2025/09/yucca-packaging-homepage-intro-plastic-cups-for-iced-chilled-drinks-2.jpg");
-    background-size:cover;
-    height:105vh;
-    padding:1% 10%
+body {
+    width: 100vw;
+    overflow: hidden;
 }
 
-#navi-1{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    border-bottom:3px solid #D1CABA;
-    padding-bottom:30px
+#sec1 {
+    background-image: url("https://yucca.co.za/wp-content/uploads/2025/09/yucca-packaging-homepage-intro-plastic-cups-for-iced-chilled-drinks-2.jpg");
+    background-size: cover;
+    height: 105vh;
+    padding: 1% 10%
 }
 
-#navi-left{
-    display:flex;
-    gap:100px
+#navi-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #D1CABA;
+    padding-bottom: 30px
 }
 
-#navi-img{
-    display:flex;
-    gap:5px;
-    align-items:center
+#navi-left {
+    display: flex;
+    gap: 100px
 }
 
-#navi-img img{
-    width:54px
+#navi-img {
+    display: flex;
+    gap: 5px;
+    align-items: center
 }
 
-#navi-img h1{
-    font-size:24px
+#navi-img img {
+    width: 54px
 }
 
-#navi-1 ul{
-    display:flex;
-    list-style:none;
-    gap:40px;
-    align-items:center
+#navi-img h1 {
+    font-size: 24px
 }
 
-#navi-1 a{
-    text-decoration:none;
-    color:#613028;
-    font-size:16px
+#navi-1 ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    align-items: center
 }
 
-.cart{
-    width:35px;
-    height:35px;
-    border:1px solid #000;
-    border-radius:5px;
-    overflow:hidden;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    position:relative
+#navi-1 a {
+    text-decoration: none;
+    color: #613028;
+    font-size: 16px
 }
 
-.cart1,.cart2{
-    position:absolute;
-    font-size:20px;
-    transition:.3s ease
+.cart {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative
 }
 
-.cart2{
-    top:100%;
-    background:#1d1d1d;
-    width:100%;
-    height:100%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#fff
+.cart1,
+.cart2 {
+    position: absolute;
+    font-size: 20px;
+    transition: .3s ease
 }
 
-.cart:hover .cart1{
-    top:-100%
+.cart2 {
+    top: 100%;
+    background: #1d1d1d;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff
 }
 
-.cart:hover .cart2{
-    top:0
+.cart:hover .cart1 {
+    top: -100%
 }
 
-#sec-p2{
-    padding-top:3%;
-    display:flex;
-    flex-direction:column;
-    gap:135px
+.cart:hover .cart2 {
+    top: 0
 }
 
-#sec-p2 h1{
-    font-size:90px;
-    font-weight:100
+#sec-p2 {
+    padding-top: 3%;
+    display: flex;
+    flex-direction: column;
+    gap: 135px
 }
 
-#secp2-box-main{
-    display:flex;
-    gap:15px
+#sec-p2 h1 {
+    font-size: 90px;
+    font-weight: 100
 }
 
-.secp2-box{
-    width:375px;
-    height:350px;
-    border-radius:10%;
-    backdrop-filter:blur(20px);
-    position:relative;
-    overflow:hidden;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:35px
+#secp2-box-main {
+    display: flex;
+    gap: 15px
 }
 
-.specp2-inbox{
+.secp2-box {
+    width: 375px;
+    height: 350px;
+    border-radius: 10%;
+    backdrop-filter: blur(20px);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px
+}
+
+.specp2-inbox {
     transition: .5s ease;
 }
 
-.secp2-box-h{
-    position:absolute;
-    inset:0;
-    padding-left:20px;
-    padding-right:20px;
-    font-size:20px;
-    opacity:0;
+.secp2-box-h {
+    position: absolute;
+    inset: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+    opacity: 0;
     transition: .5s ease;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-around;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
-.secp2-box:hover .specp2-inbox{
-    opacity:0;
+.secp2-box:hover .specp2-inbox {
+    opacity: 0;
 }
 
-.secp2-box:hover .secp2-box-h{
-    opacity:1;
+.secp2-box:hover .secp2-box-h {
+    opacity: 1;
     background-color: #fffdf5;
-    .linehover{
+
+    .linehover {
         width: 100%;
     }
 }
-.linehover{
+
+.linehover {
     border: 1px solid black;
     width: 0%;
     transition: 0.5s ease;
 }
-.tellmemore{
-    display:flex;
+
+.tellmemore {
+    display: flex;
     flex-direction: column;
-    justify-content:space-between;
+    justify-content: space-between;
     gap: 8px;
 }
-.tellmearrow{
+
+.tellmearrow {
     display: flex;
     justify-content: space-between;
 }
-.text-lines{
-    display:flex;
-    flex-direction:column;
-    gap:6px
+
+.text-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 6px
 }
 
-.d{
-    height:16px;
-    overflow:hidden
+.d {
+    height: 16px;
+    overflow: hidden
 }
 
-.d p{
-    transform:translateY(100%);
-    transition:1s ease
+.d p {
+    transform: translateY(100%);
+    transition: 1s ease
 }
 
-.secp2-box:hover .d p{
-    transform:translateY(0)
+.secp2-box:hover .d p {
+    transform: translateY(0)
 }
 
-.d{
-    overflow:hidden;
+.d {
+    overflow: hidden;
 }
 
-.d p{
-    margin:0;
-    display:block;
-    transform:translateY(100%);
-    transition-property:transform;
+.d p {
+    margin: 0;
+    display: block;
+    transform: translateY(100%);
+    transition-property: transform;
     font-size: 16px;
 }
 
-.secp2-box:hover .dp{ 
-    transition-duration:.1s; transform:translateY(0); 
+.secp2-box:hover .d p {
+    transition-duration: .1s;
+    transform: translateY(0);
 }
 
-.nav-links{
-    display:flex;
-    gap:40px;
-    list-style:none
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none
 }
 
-.nav-links li{
-    position:relative
+.nav-links li {
+    position: relative
 }
 
-.nav-links li a{
-    text-decoration:none;
-    color:#1D1D1D;
-    position:relative;
-    padding:5px 0
+.nav-links li a {
+    text-decoration: none;
+    color: #1D1D1D;
+    position: relative;
+    padding: 5px 0
 }
 
-.nav-links li a::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-10px;
-    width:100%;
-    height:3px;
-    background:#1D1D1D;
-    border-radius:20px;
-    transform:scaleX(0);
-    transform-origin:left;
-    transition:.3s ease
+.nav-links li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 3px;
+    background: #1D1D1D;
+    border-radius: 20px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: .3s ease
 }
 
-.nav-links li a:hover::after{
-    transform:scaleX(1)
+.nav-links li a:hover::after {
+    transform: scaleX(1)
 }
 
 
-.sec2{
+.sec2 {
     background-color: #DFDAC6;
     background-image: url("https://yucca.co.za/wp-content/uploads/2025/05/1c9fd89a470793175cfc7f14a7a6e6dc.webp");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center 35%;
     background-size: 800px;
     overflow: hidden;
     display: flex;
@@ -249,53 +261,56 @@
 }
 
 .slider-main {
-  width: 100%;
-  overflow: hidden;
+    width: 100%;
+    overflow: hidden;
 }
 
 .slider-track {
-  display: flex;
-  width: max-content;
-  animation: scroll 12s linear infinite;
-  padding-top: 400px;
+    display: flex;
+    width: max-content;
+    animation: scroll 12s linear infinite;
+    padding-top: 500px;
 }
 
 .slider {
-  display: flex;
-  gap: 40px;
-  padding-right: 40px;
-  
+    display: flex;
+    gap: 40px;
+    padding-right: 40px;
+
 }
 
 .slider span {
-  font-size: 64px;
-  color: #000000;
+    font-size: 64px;
+    color: #000000;
 }
 
 @keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
 }
+
 .slider-track1 {
-  display: flex;
-  width: max-content;
-  animation: scroll1 12s linear infinite;
+    display: flex;
+    width: max-content;
+    animation: scroll1 12s linear infinite;
 }
 
 @keyframes scroll1 {
-  from {
-    transform: translateX(-50%);
-  }
-  to {
-    transform: translateX(0%);
-  }
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
 }
 
-.see-product{
+.see-product {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -305,47 +320,904 @@
     font-size: 32px;
 }
 
-.see-1{
+.see-1 {
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: center;
 }
 
-#see-btn{
+#see-btn {
     width: 120px;
     height: 35px;
     background-color: black;
     color: white;
     border-radius: 5px;
-    overflow:hidden;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    position:relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     transition: 0.3s ease;
 }
 
-#see-div2{
+#see-div2 {
     top: 30px;
     position: absolute;
     transition: 0.3s ease;
 }
 
-#see-div1{
+#see-div1 {
     position: relative;
     top: 0;
     transition: 0.3s ease;
 }
-#see-btn:hover{
-    #see-div2{
+
+#see-btn:hover {
+    #see-div2 {
         top: 8px;
     }
 
-    #see-div1{
+    #see-div1 {
         top: -30px;
-    
+
     }
+
     background-color: #767676;
 }
 
+.sec3 {
+    width: 100vw;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.4s ease;
+}
+
+.img-change-box {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.img-box {
+    width: 360px;
+    height: 360px;
+    border-radius: 1.6rem;
+    backdrop-filter: blur(20px);
+}
+
+.active-box {
+    width: 483px;
+    height: 483px;
+    padding: 20px;
+}
+
+.sector-card {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+}
+
+.card-label {
+    transition: .5s ease;
+}
+
+.card-label p {
+    color: white;
+}
+
+.card-hover {
+    position: absolute;
+    inset: 0;
+    padding: 12% 30px 6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 20px;
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.sector-card:hover .card-label {
+    opacity: 0;
+}
+
+.sector-card:hover .card-hover {
+    opacity: 1;
+    background: #fffdf5;
+}
+
+.sector-card:hover .footer-line {
+    width: 100%;
+}
+
+.slide-wrap {
+    height: 36px;
+    overflow: hidden;
+}
+
+.slide-wrap h1,
+.slide-wrap p {
+    margin: 0;
+    transform: translateY(100%);
+    transition: 1s ease;
+}
+
+.sector-card:hover .slide-wrap h1,
+.sector-card:hover .slide-wrap p {
+    transform: translateY(0);
+}
+
+.slide-wrap p {
+    font-size: 20px;
+}
+
+.title-row h1 {
+    font-size: 32px;
+    line-height: 1.1;
+    width: fit-content;
+}
+
+.paragraph-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-action {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-line {
+    width: 0;
+    border: 1px solid black;
+    transition: .5s ease;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sec4 {
+    background: #FFFDF5;
+    padding: 120px 210px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    padding: 80px 0px;
+    border-top: 1px solid #A8A8A7;
+}
+
+.top {
+    border: none;
+    padding-top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 140px;
+    /* justify-content: center; */
+}
+
+.title {
+    font-size: 64px;
+    font-weight: 200;
+    line-height: 1.1;
+    color: #222;
+}
+
+.desc p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 25px;
+    max-width: 420px;
+    line-height: 1.6;
+}
+
+.btn {
+    background: #111;
+    color: #fff;
+    padding: 10px 18px;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.label {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background: #000;
+    border-radius: 50%;
+}
+
+.text {
+    color: #555;
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 500px;
+}
+
+.sec5 {
+    height: 65vh;
+    background-color: #FFFDF5;
+    padding: 20px 210px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.sec5-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.s5-top-upper p {
+    font-size: 52px;
+}
+
+.s5-b-img {
+    background-image: url("https://yucca.co.za/wp-content/uploads/2025/08/KG-SW-B-250-1200x1200.jpg");
+    background-position: center;
+    background-size: 370px;
+    background-repeat: no-repeat;
+    width: 370px;
+    height: 370px;
+    border-radius: 3%;
+    transition: 0.2s linear;
+    position: relative;
+    padding: 10px;
+    display: flex;
+    align-items: end;
+}
+
+.s5-img2 {
+    background-image: url("https://yucca.co.za/wp-content/uploads/2025/09/KG-CH-2.jpg");
+    background-position: center;
+    background-size: 370px;
+    background-repeat: no-repeat;
+    width: 370px;
+    height: 370px;
+    border-radius: 3%;
+    transition: 0.2s linear;
+    position: relative;
+    padding: 10px;
+    display: flex;
+    align-items: end;
+}
+
+.s5-img3 {
+    background-image: url("https://yucca.co.za/wp-content/uploads/2025/09/YP-JU9.jpg");
+    background-position: center;
+    background-size: 370px;
+    background-repeat: no-repeat;
+    width: 370px;
+    height: 370px;
+    border-radius: 3%;
+    transition: 0.2s linear;
+    position: relative;
+    padding: 10px;
+    display: flex;
+    align-items: end;
+}
+
+.s5-img4 {
+    background-image: url("https://yucca.co.za/wp-content/uploads/2025/08/YP-JYF90-1200x1200.jpg");
+    background-position: center;
+    background-size: 370px;
+    background-repeat: no-repeat;
+    width: 370px;
+    height: 370px;
+    border-radius: 3%;
+    transition: 0.2s linear;
+    position: relative;
+    padding: 10px;
+    display: flex;
+    align-items: end;
+}
+
+.sec5-bottom {
+    display: flex;
+    gap: 10px;
+}
+
+.sec5-bottom-main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sec5-bottom {
+    font-weight: 100;
+}
+
+.s5-b-img:hover {
+    background-size: 390px;
+}
+
+.s5-b-text span {
+    font-weight: 600;
+}
+
+.shop-main {
+    width: 120px;
+    height: 35px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative
+}
+
+.shop1,
+.shop2 {
+    position: absolute;
+    font-size: 16px;
+    transition: .2s ease
+}
+
+.shop2 {
+    top: 100%;
+    background: #1d1d1d;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff
+}
+
+.shop-main:hover .shop1 {
+    top: -100%;
+    cursor: pointer;
+}
+
+.shop-main:hover .shop2 {
+    top: 0;
+    cursor: pointer;
+}
+
+.ml-main {
+    width: 55px;
+    height: 30px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative
+}
+
+.ml1,
+.ml2 {
+    position: absolute;
+    font-size: 12px;
+    transition: .2s ease
+}
+
+.ml2 {
+    top: 100%;
+    background: #1d1d1d;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff
+}
+
+.ml-main:hover .ml1 {
+    top: -100%;
+    cursor: pointer;
+}
+
+.ml-main:hover .ml2 {
+    top: 0;
+    cursor: pointer;
+}
+
+.size-main {
+    width: 55px;
+    height: 30px;
+    display: flex;
+    gap: 10px;
+    align-items: end;
+    opacity: 0;
+    position: absolute;
+    bottom: 0%;
+    transition: 0.3s ease;
+}
+
+.s5-b-img:hover {
+    .size-main {
+        opacity: 1;
+        bottom: 10px;
+    }
+}
+
+.sec6 {
+    height: 72vh;
+    background-color: #12271D;
+    background-image: url("https://yucca.co.za/wp-content/uploads/2025/05/menu.png");
+    background-repeat: no-repeat;
+    background-position: right -100px top 5%;
+    background-size: 600px;
+    padding-top: 5%;
+}
+
+.s6-slider-main {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    top: 90px;
+}
+
+.s6-slider-track {
+    display: flex;
+    width: max-content;
+    animation: s6-scroll 12s linear infinite;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.s6-slider {
+    display: flex;
+    gap: 40px;
+    padding-right: 40px;
+}
+
+.s6-slider span {
+    font-size: 64px;
+    color: #FEFEFE;
+}
+
+@keyframes s6-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.s6-customer {
+    padding-left: 12%;
+    color: white;
+}
+
+.s6-cs-text {
+    padding-left: 12%;
+    color: white;
+}
+
+.sec6-main {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.s6-customer p {
+    font-size: 30px
+}
+
+.s6-cs-text p {
+    font-size: 60px;
+}
+
+.sec7 {
+    background: #FFFDF5;
+    height: 100vh;
+    padding-top: 5%;
+    padding-left: 11%;
+    padding-right: 11%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sec7-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    margin-bottom: 80px;
+}
+
+.sec7-title {
+    font-size: 53px;
+    font-weight: 500;
+    color: #222;
+    white-space: nowrap;
+}
+
+.sec7-desc {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.sec7-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.sec7-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sec7-list li {
+    font-size: 35px;
+    padding: 28px 0;
+    border-bottom: 1px solid #bdb9ad;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.sec7-list li::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: #000;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.sec8 {
+    height: 55vh;
+    background-color: #F7F4E9;
+    padding-top: 5%;
+    padding-left: 11%;
+    padding-right: 11%;
+    display: flex;
+    flex-direction: row;
+    gap: 34%;
+}
+
+.s8-view-btn {
+    width: 78px;
+    height: 36px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+#view-btn-2 {
+    top: 30px;
+    position: absolute;
+    transition: 0.3s ease;
+}
+
+#view-btn-1 {
+    position: relative;
+    top: 0;
+    transition: 0.3s ease;
+}
+
+.s8-view-btn:hover {
+    #view-btn-2 {
+        top: 8px;
+    }
+
+    #view-btn-1 {
+        top: -30px;
+    }
+
+    background-color: #767676;
+}
+
+.s8-l-top {
+    font-size: 34px;
+    font-weight: 100;
+}
+
+.s8-left {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.s8-r-main {
+    /* width: 820px; */
+    display: flex;
+    gap: 235px;
+    justify-content: space-between;
+    border-top: 1px solid #A09E97;
+}
+
+.s8-r-main p {
+    font-size: 24px;
+    padding: 22px 0;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.s9-ft-btn {
+    width: 150px;
+    height: 32px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+#s9-ft-1 {
+    top: 30px;
+    position: absolute;
+    color: #877265;
+    transition: 0.3s ease;
+}
+
+#s9-ft-2 {
+    position: relative;
+    top: 0;
+    color: #877265;
+    transition: 0.3s ease;
+}
+
+.s9-ft-btn:hover {
+
+    #s9-ft-1 {
+        top: 8px;
+    }
+
+    #s9-ft-2 {
+        top: -30px;
+    }
+}
+
+.sec9 {
+    height: 100vh;
+    width: 100vw;
+    background-color: #DFDAC6;
+    padding: 45px 11%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.s9-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.s9-top-r p {
+    font-size: 57px;
+}
+
+.s9-arrow {
+    width: 88px;
+    height: 88px;
+    border: 2px solid #877265;
+    border-radius: 10%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: .4s ease;
+}
+
+.arrow1,
+.arrow2 {
+    position: absolute;
+    font-size: 16px;
+    transition: .4s ease
+}
+
+.arrow2 {
+    top: 100%;
+    background: #1d1d1d;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.s9-arrow:hover .arrow1 {
+    top: -100%;
+    cursor: pointer;
+}
+
+.s9-arrow:hover .arrow2 {
+    top: 0;
+    cursor: pointer;
+}
+
+.s9-arrow:hover {
+    border-radius: 20%;
+}
+
+.s9-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.s9-bottom-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.s9-bl-box {
+    height: 365px;
+    width: 355px;
+    border: 1px solid #877265;
+    color: #877265;
+    border-radius: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    transition: all 0.6s ease;
+    background-size: cover;
+    background-position: center;
+}
+
+.s9-box1:hover {
+    background-image: url("https://yucca.co.za/wp-content/uploads/2025/09/service.jpg");
+    border-radius: 32%;
+}
+
+.s9-box2:hover {
+    background-image: url("https://yucca.co.za/wp-content/uploads/2025/09/processing.jpg");
+    border-radius: 32%;
+}
+
+.s9-box3:hover {
+    background-image: url("https://yucca.co.za/wp-content/uploads/2025/09/Agriculture.jpg");
+    border-radius: 32%;
+}
+
+.s9-arrow-main {
+    width: 300px;
+    height: 36px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: .4s ease;
+}
+
+.s9-ll-arrow1,
+.s9-ll-arrow2 {
+    position: absolute;
+    font-size: 36px;
+    transition: .4s ease;
+}
+
+.s9-ll-arrow2 {
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.s9-box1:hover .s9-ll-arrow1 {
+    top: -100%;
+    cursor: pointer;
+}
+
+.s9-box1:hover .s9-ll-arrow2 {
+    top: 0;
+    cursor: pointer;
+}
+
+.s9-box2:hover .s9-ll-arrow1 {
+    top: -100%;
+    cursor: pointer;
+}
+
+.s9-box2:hover .s9-ll-arrow2 {
+    top: 0;
+    cursor: pointer;
+}
+
+.s9-box3:hover .s9-ll-arrow1 {
+    top: -100%;
+    cursor: pointer;
+}
+
+.s9-box3:hover .s9-ll-arrow2 {
+    top: 0;
+    cursor: pointer;
+}
+
+.s9-logo-box {
+    background-image: url("https://yucca.co.za/wp-content/themes/yucca/src/assets/images/logo-icon.svg");
+    background-size: cover;
+    background-position: center;
+    border: none;
+}
+
+.s9-bottom-lower {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5%;
+    padding: 20px 10px;
+}
+
+.s9-bottom-lower ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.s9-list1 {
+    display: flex;
+    align-items: center;
+}
+
+.s9-list1 ul {
+    gap: 20px;
+}
+
+.s9-list2{
+    font-size: 17px;
+}
+
+.s9-bottom-lower{
+    border: 1px solid black;
+    border-radius: 5%;
+}
+
+.foot-icon{
+    position: absolute;
+    bottom: 55px;
+    right: 40px;
+    color: white;
+    background-color: black;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
