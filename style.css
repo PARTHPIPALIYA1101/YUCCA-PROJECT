@@ -1,20 +1,80 @@
+@font-face {
+    font-family: "Magnetik";
+    src: url("assets/fonts/magnetik-200.woff2") format("woff2");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Magnetik";
+    src: url("assets/fonts/magnetik-300.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Magnetik";
+    src: url("assets/fonts/magnetik-400.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* 700 reuses the 400 file, mirroring the source theme */
+@font-face {
+    font-family: "Magnetik";
+    src: url("assets/fonts/magnetik-400.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    /* Official Yucca palette */
+    --c-deep-forest-green: #12271D;
+    --c-thyme: #616958;
+    --c-stone-herb: #707767;
+    --c-sage-grey: #808877;
+    --c-olive-mist: #BFC0AC;
+    --c-pebble-white: #E5E6D9;
+    --c-bamboo: #BBAE96;
+    --c-oat: #DFDAC6;
+    --c-almond: #F7F4E9;
+    --c-porcelain: #FFFDF5;
+    --c-ivory: #FFFEFC;
+    --c-off-white: #FEFEFE;
+    --c-charcoal: #1D1D1B;
+    --c-dark-grey: #70706E;
+    --c-darker-grey: #464646;
+    --c-light-grey: #A8A8A7;
+    --c-rust: #BF6437;
+    --c-brand-brown: #613028;
+
+    --font: "Magnetik", Helvetica, Arial, sans-serif;
+    /* Responsive horizontal page padding */
+    --pad-x: clamp(20px, 6vw, 210px);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Roboto, sans-serif
+    font-family: var(--font);
 }
 
+html,
 body {
-    width: 100vw;
-    overflow: hidden;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 #sec1 {
-    background-image: url("https://yucca.co.za/wp-content/uploads/2025/09/yucca-packaging-homepage-intro-plastic-cups-for-iced-chilled-drinks-2.jpg");
+    background-image: url("assets/images/yucca-packaging-homepage-intro-plastic-cups-for-iced-chilled-drinks-2.jpg");
     background-size: cover;
     height: 105vh;
-    padding: 1% 10%
+    padding: 1% var(--pad-x)
 }
 
 #navi-1 {
@@ -53,7 +113,7 @@ body {
 
 #navi-1 a {
     text-decoration: none;
-    color: #613028;
+    color: var(--c-brand-brown);
     font-size: 16px
 }
 
@@ -78,7 +138,7 @@ body {
 
 .cart2 {
     top: 100%;
-    background: #1d1d1d;
+    background: var(--c-charcoal);
     width: 100%;
     height: 100%;
     display: flex;
@@ -103,7 +163,7 @@ body {
 }
 
 #sec-p2 h1 {
-    font-size: 90px;
+    font-size: clamp(34px, 7vw, 90px);
     font-weight: 100
 }
 
@@ -122,7 +182,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 35px
+    font-size: clamp(24px, 3vw, 35px)
 }
 
 .specp2-inbox {
@@ -148,7 +208,7 @@ body {
 
 .secp2-box:hover .secp2-box-h {
     opacity: 1;
-    background-color: #fffdf5;
+    background-color: var(--c-porcelain);
 
     .linehover {
         width: 100%;
@@ -222,7 +282,7 @@ body {
 
 .nav-links li a {
     text-decoration: none;
-    color: #1D1D1D;
+    color: var(--c-charcoal);
     position: relative;
     padding: 5px 0
 }
@@ -234,7 +294,7 @@ body {
     bottom: -10px;
     width: 100%;
     height: 3px;
-    background: #1D1D1D;
+    background: var(--c-charcoal);
     border-radius: 20px;
     transform: scaleX(0);
     transform-origin: left;
@@ -245,10 +305,70 @@ body {
     transform: scaleX(1)
 }
 
+/* Mobile nav (shown only at narrow widths via media query) */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 60;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--c-charcoal);
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-toggle.open span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.nav-toggle.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.open span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+.mobile-menu {
+    display: none;
+    overflow: hidden;
+    max-height: 0;
+    background: var(--c-porcelain);
+    transition: max-height 0.4s ease;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 10px 0;
+}
+
+.mobile-menu li a {
+    display: block;
+    text-decoration: none;
+    color: var(--c-charcoal);
+    font-size: 20px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--c-pebble-white);
+}
+
 
 .sec2 {
-    background-color: #DFDAC6;
-    background-image: url("https://yucca.co.za/wp-content/uploads/2025/05/1c9fd89a470793175cfc7f14a7a6e6dc.webp");
+    background-color: var(--c-oat);
+    background-image: url("assets/images/1c9fd89a470793175cfc7f14a7a6e6dc.webp");
     background-repeat: no-repeat;
     background-position: center 35%;
     background-size: 800px;
@@ -280,7 +400,7 @@ body {
 }
 
 .slider span {
-    font-size: 64px;
+    font-size: clamp(30px, 5vw, 64px);
     color: #000000;
 }
 
@@ -433,7 +553,7 @@ body {
 
 .sector-card:hover .card-hover {
     opacity: 1;
-    background: #fffdf5;
+    background: var(--c-porcelain);
 }
 
 .sector-card:hover .footer-line {
@@ -496,15 +616,15 @@ body {
 }
 
 .sec4 {
-    background: #FFFDF5;
-    padding: 120px 210px;
+    background: var(--c-porcelain);
+    padding: clamp(60px, 9vw, 120px) var(--pad-x);
 }
 
 .row {
     display: grid;
     grid-template-columns: 1.4fr 1fr;
     padding: 80px 0px;
-    border-top: 1px solid #A8A8A7;
+    border-top: 1px solid var(--c-light-grey);
 }
 
 .top {
@@ -518,10 +638,10 @@ body {
 }
 
 .title {
-    font-size: 64px;
+    font-size: clamp(30px, 5vw, 64px);
     font-weight: 200;
     line-height: 1.1;
-    color: #222;
+    color: var(--c-charcoal);
 }
 
 .desc p {
@@ -533,7 +653,7 @@ body {
 }
 
 .btn {
-    background: #111;
+    background: var(--c-charcoal);
     color: #fff;
     padding: 10px 18px;
     font-size: 14px;
@@ -564,8 +684,8 @@ body {
 
 .sec5 {
     height: 65vh;
-    background-color: #FFFDF5;
-    padding: 20px 210px;
+    background-color: var(--c-porcelain);
+    padding: 20px var(--pad-x);
     display: flex;
     flex-direction: column;
     gap: 60px;
@@ -578,11 +698,11 @@ body {
 }
 
 .s5-top-upper p {
-    font-size: 52px;
+    font-size: clamp(30px, 4.5vw, 52px);
 }
 
 .s5-b-img {
-    background-image: url("https://yucca.co.za/wp-content/uploads/2025/08/KG-SW-B-250-1200x1200.jpg");
+    background-image: url("assets/images/KG-SW-B-250-1200x1200.jpg");
     background-position: center;
     background-size: 370px;
     background-repeat: no-repeat;
@@ -597,7 +717,7 @@ body {
 }
 
 .s5-img2 {
-    background-image: url("https://yucca.co.za/wp-content/uploads/2025/09/KG-CH-2.jpg");
+    background-image: url("assets/images/KG-CH-2.jpg");
     background-position: center;
     background-size: 370px;
     background-repeat: no-repeat;
@@ -612,7 +732,7 @@ body {
 }
 
 .s5-img3 {
-    background-image: url("https://yucca.co.za/wp-content/uploads/2025/09/YP-JU9.jpg");
+    background-image: url("assets/images/YP-JU9.jpg");
     background-position: center;
     background-size: 370px;
     background-repeat: no-repeat;
@@ -627,7 +747,7 @@ body {
 }
 
 .s5-img4 {
-    background-image: url("https://yucca.co.za/wp-content/uploads/2025/08/YP-JYF90-1200x1200.jpg");
+    background-image: url("assets/images/YP-JYF90-1200x1200.jpg");
     background-position: center;
     background-size: 370px;
     background-repeat: no-repeat;
@@ -685,7 +805,7 @@ body {
 
 .shop2 {
     top: 100%;
-    background: #1d1d1d;
+    background: var(--c-charcoal);
     width: 100%;
     height: 100%;
     display: flex;
@@ -725,7 +845,7 @@ body {
 
 .ml2 {
     top: 100%;
-    background: #1d1d1d;
+    background: var(--c-charcoal);
     width: 100%;
     height: 100%;
     display: flex;
@@ -765,8 +885,8 @@ body {
 
 .sec6 {
     height: 72vh;
-    background-color: #12271D;
-    background-image: url("https://yucca.co.za/wp-content/uploads/2025/05/menu.png");
+    background-color: var(--c-deep-forest-green);
+    background-image: url("assets/images/menu.png");
     background-repeat: no-repeat;
     background-position: right -100px top 5%;
     background-size: 600px;
@@ -797,8 +917,8 @@ body {
 }
 
 .s6-slider span {
-    font-size: 64px;
-    color: #FEFEFE;
+    font-size: clamp(30px, 5vw, 64px);
+    color: var(--c-off-white);
 }
 
 @keyframes s6-scroll {
@@ -812,12 +932,12 @@ body {
 }
 
 .s6-customer {
-    padding-left: 12%;
+    padding-left: var(--pad-x);
     color: white;
 }
 
 .s6-cs-text {
-    padding-left: 12%;
+    padding-left: var(--pad-x);
     color: white;
 }
 
@@ -832,15 +952,15 @@ body {
 }
 
 .s6-cs-text p {
-    font-size: 60px;
+    font-size: clamp(30px, 5vw, 60px);
 }
 
 .sec7 {
-    background: #FFFDF5;
+    background: var(--c-porcelain);
     height: 100vh;
     padding-top: 5%;
-    padding-left: 11%;
-    padding-right: 11%;
+    padding-left: var(--pad-x);
+    padding-right: var(--pad-x);
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -852,9 +972,9 @@ body {
 }
 
 .sec7-title {
-    font-size: 53px;
+    font-size: clamp(28px, 4.5vw, 53px);
     font-weight: 500;
-    color: #222;
+    color: var(--c-charcoal);
     white-space: nowrap;
 }
 
@@ -895,14 +1015,23 @@ body {
 }
 
 .sec8 {
-    height: 55vh;
-    background-color: #F7F4E9;
+    min-height: 55vh;
+    background-color: var(--c-almond);
     padding-top: 5%;
-    padding-left: 11%;
-    padding-right: 11%;
+    padding-bottom: 5%;
+    padding-left: var(--pad-x);
+    padding-right: var(--pad-x);
     display: flex;
     flex-direction: row;
-    gap: 34%;
+    gap: 8%;
+}
+
+.s8-left {
+    flex: 0 0 34%;
+}
+
+.s8-right {
+    flex: 1;
 }
 
 .s8-view-btn {
@@ -954,12 +1083,44 @@ body {
     gap: 28px;
 }
 
+.s8-r-item {
+    border-top: 1px solid var(--c-stone-herb);
+}
+
 .s8-r-main {
-    /* width: 820px; */
     display: flex;
-    gap: 235px;
+    gap: 20px;
     justify-content: space-between;
-    border-top: 1px solid #A09E97;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-icon p {
+    transition: transform 0.35s ease;
+    font-size: 28px;
+    font-weight: 200;
+}
+
+.s8-r-item.open .faq-icon p {
+    transform: rotate(45deg);
+}
+
+.s8-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.s8-r-item.open .s8-answer {
+    max-height: 320px;
+}
+
+.s8-answer p {
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--c-dark-grey);
+    padding: 0 0 24px;
+    max-width: 620px;
 }
 
 .s8-r-main p {
@@ -1009,8 +1170,8 @@ body {
 .sec9 {
     height: 100vh;
     width: 100vw;
-    background-color: #DFDAC6;
-    padding: 45px 11%;
+    background-color: var(--c-oat);
+    padding: 45px var(--pad-x);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1023,7 +1184,7 @@ body {
 }
 
 .s9-top-r p {
-    font-size: 57px;
+    font-size: clamp(30px, 5vw, 57px);
 }
 
 .s9-arrow {
@@ -1048,7 +1209,7 @@ body {
 
 .arrow2 {
     top: 100%;
-    background: #1d1d1d;
+    background: var(--c-charcoal);
     width: 100%;
     height: 100%;
     display: flex;
@@ -1092,24 +1253,24 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 36px;
+    font-size: clamp(24px, 3vw, 36px);
     transition: all 0.6s ease;
     background-size: cover;
     background-position: center;
 }
 
 .s9-box1:hover {
-    background-image: url("https://yucca.co.za/wp-content/uploads/2025/09/service.jpg");
+    background-image: url("assets/images/service.jpg");
     border-radius: 32%;
 }
 
 .s9-box2:hover {
-    background-image: url("https://yucca.co.za/wp-content/uploads/2025/09/processing.jpg");
+    background-image: url("assets/images/processing.jpg");
     border-radius: 32%;
 }
 
 .s9-box3:hover {
-    background-image: url("https://yucca.co.za/wp-content/uploads/2025/09/Agriculture.jpg");
+    background-image: url("assets/images/Agriculture.jpg");
     border-radius: 32%;
 }
 
@@ -1127,7 +1288,7 @@ body {
 .s9-ll-arrow1,
 .s9-ll-arrow2 {
     position: absolute;
-    font-size: 36px;
+    font-size: clamp(24px, 3vw, 36px);
     transition: .4s ease;
 }
 
@@ -1172,7 +1333,7 @@ body {
 }
 
 .s9-logo-box {
-    background-image: url("https://yucca.co.za/wp-content/themes/yucca/src/assets/images/logo-icon.svg");
+    background-image: url("assets/icons/logo-icon.svg");
     background-size: cover;
     background-position: center;
     border: none;
@@ -1220,4 +1381,249 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+/* ============================================================
+   RESPONSIVE — desktop base above, narrow-width overrides below
+   ============================================================ */
+
+/* Tablets / small laptops */
+@media (max-width: 1100px) {
+    #navi-left {
+        gap: 40px;
+    }
+
+    /* Hero */
+    #sec1 {
+        height: auto;
+    }
+
+    #sec-p2 {
+        gap: 60px;
+        padding-bottom: 80px;
+    }
+
+    #secp2-box-main {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .secp2-box {
+        width: calc(50% - 8px);
+        height: 320px;
+    }
+
+    /* Sector cards */
+    .sec3 {
+        height: auto;
+        padding: 80px var(--pad-x);
+    }
+
+    .img-change-box {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .active-box {
+        width: 360px;
+        height: 360px;
+        padding: 0;
+    }
+
+    /* Products */
+    .sec5 {
+        height: auto;
+    }
+
+    .sec5-bottom {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .sec5-bottom-main {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+/* Mobile nav */
+@media (max-width: 960px) {
+
+    #navi-1 .nav-links,
+    #navi-1 .nav-right {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    #navi-1 {
+        padding-bottom: 20px;
+    }
+}
+
+/* Phones (landscape) / large mobile */
+@media (max-width: 900px) {
+    /* Marquee section — relax the large fixed offsets */
+    .sec2 {
+        height: auto;
+        padding-bottom: 80px;
+        background-size: 65vw;
+        background-position: center 30%;
+    }
+
+    .slider-track {
+        padding-top: 260px;
+    }
+
+    .see-product {
+        top: 0;
+        margin-top: 60px;
+        font-size: 22px;
+        text-align: center;
+        padding: 0 var(--pad-x);
+    }
+
+    /* Mission / vision */
+    .top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .row {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 40px 0;
+    }
+
+    .sec4 {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    /* Custom solutions */
+    .sec6 {
+        height: auto;
+        padding-bottom: 80px;
+        background-size: 55vw;
+        background-position: right -30px top 4%;
+    }
+
+    /* Standards */
+    .sec7 {
+        height: auto;
+        padding-bottom: 80px;
+    }
+
+    .sec7-top {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-bottom: 40px;
+    }
+
+    .sec7-title {
+        white-space: normal;
+    }
+
+    .sec7-list {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    /* FAQ */
+    .sec8 {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .s8-left {
+        flex: none;
+    }
+
+    /* Footer */
+    .sec9 {
+        height: auto;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .s9-top {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .s9-bottom-top {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .s9-bl-box {
+        width: 100%;
+    }
+
+    .s9-bottom-lower {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    .s9-list1 ul,
+    .s9-list2 ul {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 600px) {
+    .sec5-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .secp2-box {
+        width: 100%;
+        height: 300px;
+    }
+
+    .img-box,
+    .active-box {
+        width: 100%;
+        max-width: 420px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        padding: 0;
+    }
+
+    .sec5-bottom-main {
+        flex: 1 1 100%;
+    }
+
+    .s5-b-img,
+    .s5-img2,
+    .s5-img3,
+    .s5-img4 {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        background-size: cover;
+    }
+
+    .s8-r-main p {
+        font-size: 20px;
+    }
+
+    .s9-bl-box {
+        height: 260px;
+    }
+
+    .foot-icon {
+        bottom: 20px;
+        right: 20px;
+    }
 }
